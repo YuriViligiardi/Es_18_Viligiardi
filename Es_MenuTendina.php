@@ -7,6 +7,19 @@
 </head>
 <body>
     <?php
+        $film = ["Cars", "Fast and Furious", "Iron Man", "Deadpool", "La vita è bella"];
+        $nameMenu = "filmpreferito";
+        createMenu($film, $nameMenu);
+
+        function createMenu($array, $name){
+            $value = 1;
+            echo "<select name='$name'>";
+                foreach ($array as $elem) {
+                    echo "<option value='f" . $value . "'>$elem</option>";
+                    $value++;
+                }
+            echo "</select>";
+        }
     ?>
 </body>
 </html>
